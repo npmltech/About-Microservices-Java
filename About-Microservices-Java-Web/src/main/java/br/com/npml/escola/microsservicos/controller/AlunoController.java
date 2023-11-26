@@ -1,7 +1,7 @@
 package br.com.npml.escola.microsservicos.controller;
 
 import br.com.npml.escola.microsservicos.exception.AlunoNotFoundException;
-import br.com.npml.escola.microsservicos.impl.AlunoService;
+import br.com.npml.escola.microsservicos.contract.AlunoService;
 import br.com.npml.escola.microsservicos.model.Aluno;
 import br.com.npml.escola.microsservicos.payload.ResponsePayload;
 import org.slf4j.Logger;
