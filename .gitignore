@@ -26,6 +26,9 @@ replay_pid*
 # others
 /.idea
 */.idea
+**/.idea
+../.idea
 /target
 */target
-
+**/target
+../.target
