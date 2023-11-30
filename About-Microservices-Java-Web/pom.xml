@@ -9,10 +9,10 @@
         <!--  lookup parent from repository  -->
     </parent>
     <groupId>br.com.npml</groupId>
-    <artifactId>escola-backend</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>About-Microservices-Java-Web</artifactId>
+    <version>0.0.1-BETA</version>
     <packaging>jar</packaging>
-    <name>escola-backend</name>
+    <name>About-Microservices-Java-Web</name>
     <description>Study about microservices</description>
     <properties>
         <java.version>17</java.version>
