@@ -1,4 +1,4 @@
-package br.com.npml.escola.microsservicos;
+package br.com.npml.aluno.microsservicos;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
