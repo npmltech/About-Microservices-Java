@@ -42,11 +42,11 @@ public class AlunoServiceTest {
                 .build();
 
         Aluno jose = Aluno.builder()
-                .nomeAluno("José Augusto Mello")
-                .numMatricula(4321)
-                .numSalaAula(123)
-                .ativo(false)
-                .build();
+            .nomeAluno("José Augusto Mello")
+            .numMatricula(4321)
+            .numSalaAula(123)
+            .ativo(false)
+            .build();
 
         List<Aluno> alunos = List.of(maria, jose);
         repository.saveAll(alunos);
@@ -89,11 +89,11 @@ public class AlunoServiceTest {
     public void testaCreate() {
         LOGGER.info("Testa Create");
         Aluno bruno = Aluno.builder()
-                .nomeAluno("Bruno Garcia")
-                .numMatricula(7890)
-                .numSalaAula(234)
-                .ativo(false)
-                .build();
+            .nomeAluno("Bruno Garcia")
+            .numMatricula(7890)
+            .numSalaAula(234)
+            .ativo(false)
+            .build();
         Aluno novoAluno = alunoService.create(bruno);
         assertEquals(5, novoAluno.getIdAluno());
         List<Aluno> all = alunoService.getAll();
@@ -105,11 +105,11 @@ public class AlunoServiceTest {
     public void testaUpdate() {
         LOGGER.info("Testa Update");
         Aluno bruno = Aluno.builder()
-                .nomeAluno("Bruno Garcia Oliveira")
-                .numMatricula(7890)
-                .numSalaAula(234)
-                .ativo(false)
-                .build();
+            .nomeAluno("Bruno Garcia Oliveira")
+            .numMatricula(7890)
+            .numSalaAula(234)
+            .ativo(false)
+            .build();
         Aluno alunoAtualizado = alunoService.update(3, bruno);
         alunoService.deleteById(1);
         assertEquals("Bruno Garcia Oliveira", alunoAtualizado.getNomeAluno());
