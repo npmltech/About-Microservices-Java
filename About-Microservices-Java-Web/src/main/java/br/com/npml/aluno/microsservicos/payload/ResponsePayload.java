@@ -1,4 +1,4 @@
-package br.com.npml.escola.microsservicos.payload;
+package br.com.npml.aluno.microsservicos.payload;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

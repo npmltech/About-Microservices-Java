@@ -1,9 +1,9 @@
-package br.com.npml.escola.microsservicos.service;
+package br.com.npml.aluno.microsservicos.service;
 
-import br.com.npml.escola.microsservicos.exception.AlunoNotFoundException;
-import br.com.npml.escola.microsservicos.contract.AlunoService;
-import br.com.npml.escola.microsservicos.model.Aluno;
-import br.com.npml.escola.microsservicos.repository.AlunoRepository;
+import br.com.npml.aluno.microsservicos.exception.AlunoNotFoundException;
+import br.com.npml.aluno.microsservicos.contract.AlunoService;
+import br.com.npml.aluno.microsservicos.model.Aluno;
+import br.com.npml.aluno.microsservicos.repository.AlunoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

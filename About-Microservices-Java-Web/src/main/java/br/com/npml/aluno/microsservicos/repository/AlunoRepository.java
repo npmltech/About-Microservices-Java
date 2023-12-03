@@ -1,6 +1,6 @@
-package br.com.npml.escola.microsservicos.repository;
+package br.com.npml.aluno.microsservicos.repository;
 
-import br.com.npml.escola.microsservicos.model.Aluno;
+import br.com.npml.aluno.microsservicos.model.Aluno;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

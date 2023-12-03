@@ -1,4 +1,4 @@
-package br.com.npml.escola.microsservicos.exception;
+package br.com.npml.aluno.microsservicos.exception;
 
 import lombok.*;
 

@@ -1,6 +1,6 @@
-package br.com.npml.escola.microsservicos.contract;
+package br.com.npml.aluno.microsservicos.contract;
 
-import br.com.npml.escola.microsservicos.model.Aluno;
+import br.com.npml.aluno.microsservicos.model.Aluno;
 
 import java.util.List;
 

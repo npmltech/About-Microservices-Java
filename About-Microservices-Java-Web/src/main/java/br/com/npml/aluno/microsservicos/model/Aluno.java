@@ -1,4 +1,4 @@
-package br.com.npml.escola.microsservicos.model;
+package br.com.npml.aluno.microsservicos.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

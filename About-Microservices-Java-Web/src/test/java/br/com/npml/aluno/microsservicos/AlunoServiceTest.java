@@ -1,9 +1,9 @@
-package br.com.npml.escola.microsservicos;
+package br.com.npml.aluno.microsservicos;
 
-import br.com.npml.escola.microsservicos.exception.AlunoNotFoundException;
-import br.com.npml.escola.microsservicos.contract.AlunoService;
-import br.com.npml.escola.microsservicos.model.Aluno;
-import br.com.npml.escola.microsservicos.repository.AlunoRepository;
+import br.com.npml.aluno.microsservicos.exception.AlunoNotFoundException;
+import br.com.npml.aluno.microsservicos.contract.AlunoService;
+import br.com.npml.aluno.microsservicos.model.Aluno;
+import br.com.npml.aluno.microsservicos.repository.AlunoRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;

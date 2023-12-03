@@ -1,9 +1,9 @@
-package br.com.npml.escola.microsservicos.controller;
+package br.com.npml.aluno.microsservicos.controller;
 
-import br.com.npml.escola.microsservicos.exception.AlunoNotFoundException;
-import br.com.npml.escola.microsservicos.contract.AlunoService;
-import br.com.npml.escola.microsservicos.model.Aluno;
-import br.com.npml.escola.microsservicos.payload.ResponsePayload;
+import br.com.npml.aluno.microsservicos.exception.AlunoNotFoundException;
+import br.com.npml.aluno.microsservicos.contract.AlunoService;
+import br.com.npml.aluno.microsservicos.model.Aluno;
+import br.com.npml.aluno.microsservicos.payload.ResponsePayload;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/")
@@ -29,9 +30,10 @@ public class AlunoController {
     private final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 
     @GetMapping
-    public ResponseEntity<List<Aluno>> getAll() {
+    public ResponseEntity<List<Aluno>> getAll(@RequestHeader Map<String, String> headers) {
         List<Aluno> all = alunoService.getAll();
         LOGGER.info("GET ALL: " + all);
+        LOGGER.info("All Headers: " + headers.toString());
         return ResponseEntity.ok(all);
     }
 
