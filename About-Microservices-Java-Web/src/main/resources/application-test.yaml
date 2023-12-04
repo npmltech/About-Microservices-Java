@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: ALUNO_SERVICE_TEST
   datasource:
     url: jdbc:postgresql://localhost:5432/escola_db_homol
     username: admin
