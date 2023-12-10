@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class AlunoServiceImpl implements AlunoService {
+public class  AlunoServiceImpl implements AlunoService {
 
     @Autowired
     private AlunoRepository repository;

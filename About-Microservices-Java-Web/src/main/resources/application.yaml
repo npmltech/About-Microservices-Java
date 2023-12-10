@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ALUNO_SERVICE
+    name: ALUNO-SERVICE
   datasource:
     url: jdbc:postgresql://localhost:5432/escola_db
     username: admin
@@ -14,10 +14,11 @@ spring:
         show_sql: true
         format_sql: true
 server:
-  port: 8081
+  port: ${random.int(8050,8070)}
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8761/eureka
+    enabled: true

@@ -1,12 +1,14 @@
 package br.com.npml.aluno.microsservicos.controller;
 
-import br.com.npml.aluno.microsservicos.exception.AlunoNotFoundException;
 import br.com.npml.aluno.microsservicos.contract.AlunoService;
+import br.com.npml.aluno.microsservicos.exception.AlunoNotFoundException;
 import br.com.npml.aluno.microsservicos.model.Aluno;
 import br.com.npml.aluno.microsservicos.payload.ResponsePayload;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +25,9 @@ public class AlunoController {
     @Autowired
     private AlunoService alunoService;
 
+    @Value("${spring.application.serverNick}")
+    private String nickname;
+
     private final Logger LOGGER = LoggerFactory.getLogger(AlunoController.class);
 
     private final LocalDateTime localDateTime = LocalDateTime.now();
@@ -34,7 +39,12 @@ public class AlunoController {
         List<Aluno> all = alunoService.getAll();
         LOGGER.info("GET ALL: " + all);
         LOGGER.info("All Headers: " + headers.toString());
-        return ResponseEntity.ok(all);
+        // return ResponseEntity.ok(all);
+
+        HttpHeaders httpHeaders = new HttpHeaders();
+        httpHeaders.set("server-name", nickname);
+
+        return ResponseEntity.ok().headers(httpHeaders).body(all);
     }
 
     @GetMapping("/{id}")
