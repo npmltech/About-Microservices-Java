@@ -35,11 +35,11 @@ public class AlunoServiceTest {
     public void setUp() {
         LOGGER.info("Before Each");
         Aluno maria = Aluno.builder()
-                .nomeAluno("Maria Eduarda")
-                .numMatricula(1234)
-                .numSalaAula(123)
-                .ativo(true)
-                .build();
+            .nomeAluno("Maria Eduarda")
+            .numMatricula(1234)
+            .numSalaAula(123)
+            .ativo(true)
+            .build();
 
         Aluno jose = Aluno.builder()
             .nomeAluno("José Augusto Mello")
@@ -69,7 +69,6 @@ public class AlunoServiceTest {
         Aluno aluno = alunoService.getById(1);
         assertEquals("Maria Eduarda", aluno.getNomeAluno());
         assertEquals(1234, aluno.getNumMatricula());
-
         assertThrows(AlunoNotFoundException.class, () -> {
             Aluno alunoException = alunoService.getById(1000);
         });
