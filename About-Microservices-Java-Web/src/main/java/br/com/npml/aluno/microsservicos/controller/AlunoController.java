@@ -28,7 +28,7 @@ public class AlunoController {
     @Value("${spring.application.serverNick}")
     private String nickname;
 
-    private final Logger LOGGER = LoggerFactory.getLogger(AlunoController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AlunoController.class);
 
     private final LocalDateTime localDateTime = LocalDateTime.now();
 
@@ -47,8 +47,13 @@ public class AlunoController {
         return ResponseEntity.ok().headers(httpHeaders).body(all);
     }
 
+    /*
+    * Uso o wildcard pois, posso retornar os dados de aluno OU
+    * Retornar o ResponsePayload (exception).
+    */
     @GetMapping("/{id}")
-    public ResponseEntity<?> getById(@PathVariable long id) {
+    public ResponseEntity<Object> getById(@PathVariable long id) {
+        ResponseEntity<?> result;
         try {
             Aluno aluno = alunoService.getById(id);
             LOGGER.info(
@@ -60,7 +65,7 @@ public class AlunoController {
                     )
                 //
             );
-            return ResponseEntity.ok(aluno);
+            result = ResponseEntity.ok(aluno);
             //
         } catch (AlunoNotFoundException ex) {
             ex.printStackTrace();
@@ -85,8 +90,9 @@ public class AlunoController {
                     //
                 //
             //
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(notFound);
+            result = ResponseEntity.status(HttpStatus.NOT_FOUND).body(notFound);
         }
+        return (ResponseEntity<Object>) result;
     }
 
     @PostMapping
@@ -120,8 +126,11 @@ public class AlunoController {
         return ResponseEntity.status(HttpStatus.OK).body(alunoAtualizado);
     }
 
+    /*
+     * Ao remover, envio uma mensagem junto ao Status ACCEPTED...
+     */
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> delete(@PathVariable long id) {
+    public ResponseEntity<String> delete(@PathVariable long id) {
         LOGGER.info("DELETE BY ID: %d".formatted(id));
         alunoService.deleteById(id);
         return ResponseEntity.status(HttpStatus.ACCEPTED)
