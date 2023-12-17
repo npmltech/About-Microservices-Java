@@ -15,6 +15,8 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
 ## 🚀 Realizando o Setup
 
+- O Projeto se encontra no diretório: **About-Microservices-Java-Web**
+
 1. Clone o repositório;
 
 2. Inicie a base de dados em container encontrado na pasta *docker-compose.yml*;
