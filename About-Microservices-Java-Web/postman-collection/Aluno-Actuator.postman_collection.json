@@ -1,0 +1,28 @@
+{
+	"info": {
+		"_postman_id": "289c218c-2439-4f39-883f-40fa9c74fa67",
+		"name": "Aluno-Actuator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "5000052"
+	},
+	"item": [
+		{
+			"name": "get-actuator",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8088/actuator"
+			},
+			"response": []
+		},
+		{
+			"name": "get-actuator-health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8060/actuator/health"
+			},
+			"response": []
+		}
+	]
+}

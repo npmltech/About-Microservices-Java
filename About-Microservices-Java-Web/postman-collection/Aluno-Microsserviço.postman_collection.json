@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "86238a6b-ab1f-444c-a91d-200a8a5e460a",
+		"name": "Aluno-Microsserviço",
+		"description": "Estudo de microsserviço.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "5000052"
+	},
+	"item": [
+		{
+			"name": "get_aluno_by_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8088/4"
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_alunos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8088/"
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_alunos_random_port",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8088/"
+			},
+			"response": []
+		},
+		{
+			"name": "create_aluno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nomeAluno\": \"Maria Maria 2\",\n    \"numMatricula\": 123,\n    \"numSalaAula\": 123,\n    \"ativo\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8088/"
+			},
+			"response": []
+		},
+		{
+			"name": "delete_aluno_by_id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8088/3"
+			},
+			"response": []
+		},
+		{
+			"name": "update_aluno",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nomeAluno\": \"Ricardo Oliveira Rocha Lima Souza\",\n    \"numMatricula\": 345,\n    \"numSalaAula\": 345,\n    \"ativo\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8088/6"
+			},
+			"response": []
+		}
+	]
+}
